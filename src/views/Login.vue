@@ -26,9 +26,9 @@
         },
         methods: {
             login() {
-                if(this.input.username != "" && this.input.password != "") {
+                if(this.input.username !== "" && this.input.password !== "") {
                     // This should actually be an api call not a check against this.$parent.mockAccount
-                    if(this.input.username == this.$parent.mockAccount.username && this.input.password == this.$parent.mockAccount.password) {
+                    if(this.input.username === this.$parent.mockAccount.username && this.input.password === this.$parent.mockAccount.password) {
                         this.$emit("authenticated", true);
                         this.$router.replace({ name: "Secure" });
                     } else {
